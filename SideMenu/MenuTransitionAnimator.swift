@@ -41,7 +41,8 @@ extension MenuTransitionAnimator {
         let menu = context.viewController(forKey: UITransitionContextViewControllerKey.to)!
         
         let view = menu.view!
-        view.frame = CGRect(x: 0, y: 0, width: menu.preferredContentSize.width, height: host.view.bounds.height)
+        //view.frame = CGRect(x: 0, y: 0, width: menu.preferredContentSize.width, height: host.view.bounds.height)
+        view.frame = CGRect(x: 0, y: 0, width: menu.view!.frame.size.width * 0.80, height: host.view.bounds.height)
         view.autoresizingMask = [.flexibleRightMargin, .flexibleHeight]
         view.translatesAutoresizingMaskIntoConstraints = true
         
